@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7C85746-0A41-4E3E-9CEF-1A15E9B056E3}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SRV.RESTFulAlo</RootNamespace>
+    <AssemblyName>SRV.RESTFulAlo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompressAttribute.cs" />
+    <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Error\ThrowError.cs" />
+    <Compile Include="FuncionesGenerales.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Controles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="css\Gridview.css" />
+    <Content Include="css\Home.css" />
+    <Content Include="dll\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\Newtonsoft.Json.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\WinSCP 5.13.4.0\WinSCPnet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\WinSCP 5.13.7.0\WinSCPnet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\WinSCP 5.17.3.0\WinSCPnet.dll" />
+    <Content Include="Error\ThrowError.xslt" />
+    <Content Include="favicon.ico" />
+    <Content Include="FileDownload\FILE.txt" />
+    <Content Include="FileUpload\FILE.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="images\LOGO.png" />
+    <Content Include="images\OK.png" />
+    <Content Include="images\ques.png" />
+    <Content Include="js\Progress.js" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.css" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap-3.3.7\js\bootstrap.js" />
+    <Content Include="lib\bootstrap-3.3.7\js\bootstrap.min.js" />
+    <Content Include="lib\bootstrap-3.3.7\js\npm.js" />
+    <Content Include="lib\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="lib\bootstrap-select\css\bootstrap-select.min.css" />
+    <Content Include="lib\bootstrap-select\js\bootstrap-select.js" />
+    <Content Include="lib\bootstrap-select\js\bootstrap-select.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ar_AR.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ar_AR.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-bg_BG.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-bg_BG.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-cro_CRO.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-cro_CRO.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-cs_CZ.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-cs_CZ.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-da_DK.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-da_DK.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-de_DE.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-de_DE.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-en_US.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-en_US.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-es_CL.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-es_CL.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-es_ES.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-es_ES.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-et_EE.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-et_EE.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-eu.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-eu.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-fa_IR.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-fa_IR.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-fi_FI.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-fi_FI.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-fr_FR.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-fr_FR.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-hu_HU.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-hu_HU.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-id_ID.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-id_ID.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-it_IT.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-it_IT.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ja_JP.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ja_JP.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-kh_KM.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-kh_KM.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ko_KR.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ko_KR.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-lt_LT.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-lt_LT.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-nb_NO.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-nb_NO.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-nl_NL.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-nl_NL.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-pl_PL.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-pl_PL.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-pt_BR.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-pt_BR.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-pt_PT.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-pt_PT.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ro_RO.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ro_RO.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ru_RU.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ru_RU.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-sk_SK.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-sk_SK.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-sl_SI.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-sl_SI.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-sv_SE.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-sv_SE.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-tr_TR.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-tr_TR.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ua_UA.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-ua_UA.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-vi_VN.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-vi_VN.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-zh_CN.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-zh_CN.min.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-zh_TW.js" />
+    <Content Include="lib\bootstrap-select\js\i18n\defaults-zh_TW.min.js" />
+    <Content Include="lib\Datatables\css\autoFill.bootstrap.css" />
+    <Content Include="lib\Datatables\css\autoFill.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\autoFill.dataTables.css" />
+    <Content Include="lib\Datatables\css\autoFill.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\autoFill.foundation.css" />
+    <Content Include="lib\Datatables\css\autoFill.foundation.min.css" />
+    <Content Include="lib\Datatables\css\autoFill.jqueryui.css" />
+    <Content Include="lib\Datatables\css\autoFill.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\buttons.bootstrap.css" />
+    <Content Include="lib\Datatables\css\buttons.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\buttons.bootstrap4.css" />
+    <Content Include="lib\Datatables\css\buttons.bootstrap4.min.css" />
+    <Content Include="lib\Datatables\css\buttons.dataTables.css" />
+    <Content Include="lib\Datatables\css\buttons.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\buttons.foundation.css" />
+    <Content Include="lib\Datatables\css\buttons.foundation.min.css" />
+    <Content Include="lib\Datatables\css\buttons.jqueryui.css" />
+    <Content Include="lib\Datatables\css\buttons.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\colReorder.bootstrap.css" />
+    <Content Include="lib\Datatables\css\colReorder.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\colReorder.dataTables.css" />
+    <Content Include="lib\Datatables\css\colReorder.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\colReorder.foundation.css" />
+    <Content Include="lib\Datatables\css\colReorder.foundation.min.css" />
+    <Content Include="lib\Datatables\css\colReorder.jqueryui.css" />
+    <Content Include="lib\Datatables\css\colReorder.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\dataTables.bootstrap.css" />
+    <Content Include="lib\Datatables\css\dataTables.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\dataTables.bootstrap4.css" />
+    <Content Include="lib\Datatables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="lib\Datatables\css\dataTables.foundation.css" />
+    <Content Include="lib\Datatables\css\dataTables.foundation.min.css" />
+    <Content Include="lib\Datatables\css\dataTables.jqueryui.css" />
+    <Content Include="lib\Datatables\css\dataTables.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\dataTables.material.css" />
+    <Content Include="lib\Datatables\css\dataTables.material.min.css" />
+    <Content Include="lib\Datatables\css\dataTables.semanticui.css" />
+    <Content Include="lib\Datatables\css\dataTables.semanticui.min.css" />
+    <Content Include="lib\Datatables\css\dataTables.uikit.css" />
+    <Content Include="lib\Datatables\css\dataTables.uikit.min.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.bootstrap.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.dataTables.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.foundation.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.foundation.min.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.jqueryui.css" />
+    <Content Include="lib\Datatables\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.bootstrap.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.dataTables.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.foundation.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.foundation.min.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.jqueryui.css" />
+    <Content Include="lib\Datatables\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\jquery.dataTables.css" />
+    <Content Include="lib\Datatables\css\jquery.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="lib\Datatables\css\keyTable.bootstrap.css" />
+    <Content Include="lib\Datatables\css\keyTable.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\keyTable.dataTables.css" />
+    <Content Include="lib\Datatables\css\keyTable.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\keyTable.foundation.css" />
+    <Content Include="lib\Datatables\css\keyTable.foundation.min.css" />
+    <Content Include="lib\Datatables\css\keyTable.jqueryui.css" />
+    <Content Include="lib\Datatables\css\keyTable.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\responsive.bootstrap.css" />
+    <Content Include="lib\Datatables\css\responsive.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\responsive.dataTables.css" />
+    <Content Include="lib\Datatables\css\responsive.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\responsive.foundation.css" />
+    <Content Include="lib\Datatables\css\responsive.foundation.min.css" />
+    <Content Include="lib\Datatables\css\responsive.jqueryui.css" />
+    <Content Include="lib\Datatables\css\responsive.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\rowReorder.bootstrap.css" />
+    <Content Include="lib\Datatables\css\rowReorder.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\rowReorder.dataTables.css" />
+    <Content Include="lib\Datatables\css\rowReorder.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\rowReorder.foundation.css" />
+    <Content Include="lib\Datatables\css\rowReorder.foundation.min.css" />
+    <Content Include="lib\Datatables\css\rowReorder.jqueryui.css" />
+    <Content Include="lib\Datatables\css\rowReorder.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\scroller.bootstrap.css" />
+    <Content Include="lib\Datatables\css\scroller.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\scroller.dataTables.css" />
+    <Content Include="lib\Datatables\css\scroller.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\scroller.foundation.css" />
+    <Content Include="lib\Datatables\css\scroller.foundation.min.css" />
+    <Content Include="lib\Datatables\css\scroller.jqueryui.css" />
+    <Content Include="lib\Datatables\css\scroller.jqueryui.min.css" />
+    <Content Include="lib\Datatables\css\select.bootstrap.css" />
+    <Content Include="lib\Datatables\css\select.bootstrap.min.css" />
+    <Content Include="lib\Datatables\css\select.dataTables.css" />
+    <Content Include="lib\Datatables\css\select.dataTables.min.css" />
+    <Content Include="lib\Datatables\css\select.foundation.css" />
+    <Content Include="lib\Datatables\css\select.foundation.min.css" />
+    <Content Include="lib\Datatables\css\select.jqueryui.css" />
+    <Content Include="lib\Datatables\css\select.jqueryui.min.css" />
+    <Content Include="lib\Datatables\images\details_close.png" />
+    <Content Include="lib\Datatables\images\details_open.png" />
+    <Content Include="lib\Datatables\images\sort_asc.png" />
+    <Content Include="lib\Datatables\images\sort_asc_disabled.png" />
+    <Content Include="lib\Datatables\images\sort_both.png" />
+    <Content Include="lib\Datatables\images\sort_desc.png" />
+    <Content Include="lib\Datatables\images\sort_desc_disabled.png" />
+    <Content Include="lib\Datatables\js\autoFill.bootstrap.js" />
+    <Content Include="lib\Datatables\js\autoFill.bootstrap.min.js" />
+    <Content Include="lib\Datatables\js\autoFill.foundation.js" />
+    <Content Include="lib\Datatables\js\autoFill.foundation.min.js" />
+    <Content Include="lib\Datatables\js\autoFill.jqueryui.js" />
+    <Content Include="lib\Datatables\js\autoFill.jqueryui.min.js" />
+    <Content Include="lib\Datatables\js\buttons.bootstrap.js" />
+    <Content Include="lib\Datatables\js\buttons.bootstrap.min.js" />
+    <Content Include="lib\Datatables\js\buttons.bootstrap4.js" />
+    <Content Include="lib\Datatables\js\buttons.bootstrap4.min.js" />
+    <Content Include="lib\Datatables\js\buttons.colVis.js" />
+    <Content Include="lib\Datatables\js\buttons.colVis.min.js" />
+    <Content Include="lib\Datatables\js\buttons.flash.js" />
+    <Content Include="lib\Datatables\js\buttons.flash.min.js" />
+    <Content Include="lib\Datatables\js\buttons.foundation.js" />
+    <Content Include="lib\Datatables\js\buttons.foundation.min.js" />
+    <Content Include="lib\Datatables\js\buttons.html5.js" />
+    <Content Include="lib\Datatables\js\buttons.html5.min.js" />
+    <Content Include="lib\Datatables\js\buttons.jqueryui.js" />
+    <Content Include="lib\Datatables\js\buttons.jqueryui.min.js" />
+    <Content Include="lib\Datatables\js\buttons.print.js" />
+    <Content Include="lib\Datatables\js\buttons.print.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.autoFill.js" />
+    <Content Include="lib\Datatables\js\dataTables.autoFill.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.bootstrap.js" />
+    <Content Include="lib\Datatables\js\dataTables.bootstrap.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.bootstrap4.js" />
+    <Content Include="lib\Datatables\js\dataTables.bootstrap4.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.buttons.js" />
+    <Content Include="lib\Datatables\js\dataTables.buttons.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.colReorder.js" />
+    <Content Include="lib\Datatables\js\dataTables.colReorder.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.fixedColumns.js" />
+    <Content Include="lib\Datatables\js\dataTables.fixedColumns.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.fixedHeader.js" />
+    <Content Include="lib\Datatables\js\dataTables.fixedHeader.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.foundation.js" />
+    <Content Include="lib\Datatables\js\dataTables.foundation.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.jqueryui.js" />
+    <Content Include="lib\Datatables\js\dataTables.jqueryui.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.keyTable.js" />
+    <Content Include="lib\Datatables\js\dataTables.keyTable.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.material.js" />
+    <Content Include="lib\Datatables\js\dataTables.material.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.responsive.js" />
+    <Content Include="lib\Datatables\js\dataTables.responsive.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.rowReorder.js" />
+    <Content Include="lib\Datatables\js\dataTables.rowReorder.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.scroller.js" />
+    <Content Include="lib\Datatables\js\dataTables.scroller.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.select.js" />
+    <Content Include="lib\Datatables\js\dataTables.select.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.semanticui.js" />
+    <Content Include="lib\Datatables\js\dataTables.semanticui.min.js" />
+    <Content Include="lib\Datatables\js\dataTables.uikit.js" />
+    <Content Include="lib\Datatables\js\dataTables.uikit.min.js" />
+    <Content Include="lib\Datatables\js\jquery.dataTables.js" />
+    <Content Include="lib\Datatables\js\jquery.dataTables.min.js" />
+    <Content Include="lib\Datatables\js\responsive.bootstrap.js" />
+    <Content Include="lib\Datatables\js\responsive.bootstrap.min.js" />
+    <Content Include="lib\Datatables\js\responsive.foundation.js" />
+    <Content Include="lib\Datatables\js\responsive.foundation.min.js" />
+    <Content Include="lib\Datatables\js\responsive.jqueryui.js" />
+    <Content Include="lib\Datatables\js\responsive.jqueryui.min.js" />
+    <Content Include="lib\Datatables\swf\flashExport.swf" />
+    <Content Include="lib\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="lib\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="lib\jquery-3.2.0\jquery-3.2.0.js" />
+    <Content Include="lib\jquery-3.2.0\jquery-3.2.0.min.js" />
+    <Content Include="lib\jquery-3.2.0\jquery-3.2.0.slim.js" />
+    <Content Include="lib\jquery-3.2.0\jquery-3.2.0.slim.min.js" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\AUTHORS.txt" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\images\ui-icons_444444_256x240.png" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\images\ui-icons_555555_256x240.png" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\images\ui-icons_777620_256x240.png" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\images\ui-icons_777777_256x240.png" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\index.html" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.css" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.min.css" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.structure.css" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.structure.min.css" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.theme.css" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\jquery-ui.theme.min.css" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\LICENSE.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SRV.Entidades\SRV.Entidades.csproj">
+      <Project>{9d71385b-0a11-4632-a7ca-d1fff38af58d}</Project>
+      <Name>SRV.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SRV.Negocio\SRV.Negocio.csproj">
+      <Project>{76f350ca-d55a-4860-9891-75ea8365b10b}</Project>
+      <Name>SRV.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SRV.Utilidades\SRV.Utilidades.csproj">
+      <Project>{2898f56f-c8d9-4d4a-886b-a0071b226814}</Project>
+      <Name>SRV.Utilidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap-theme.min.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\css\bootstrap.min.css.map" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\Datatables\css\common.scss" />
+    <Content Include="lib\Datatables\css\mixins.scss" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lib\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="lib\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\core.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\list.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\path.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="lib\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="lib\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="lib\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="lib\jquery-ui-1.12.1.custom\package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Main.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\bootstrap-select\css\bootstrap-select.css.map" />
+    <Content Include="lib\bootstrap-select\js\bootstrap-select.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\PUBLIC.pubxml" />
+    <None Include="Properties\PublishProfiles\PUBLICACION.pubxml" />
+    <None Include="Properties\PublishProfiles\PUBLICAR.pubxml" />
+    <None Include="Properties\PublishProfiles\RESTFUL_FTP.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5647/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
