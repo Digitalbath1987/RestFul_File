@@ -1,0 +1,29 @@
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.pdb
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.csprojResolveAssemblyReference.cache
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.pdb
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.csprojResolveAssemblyReference.cache
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.pdb
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.pdb
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\bin\Release\Newtonsoft.Json.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\bin\Release\Newtonsoft.Json.xml
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FILE\SRV.RESTFul\SRV.Utilidades\bin\Release\WinSCPnet.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.pdb
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\bin\Release\Newtonsoft.Json.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\bin\Release\WinSCPnet.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\bin\Release\Newtonsoft.Json.xml
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.csprojResolveAssemblyReference.cache
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.dll
+D:\PROYECTOS\2012\WEB\SERVICIOS_RESTFUL_ALO_FTP\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.pdb
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.dll
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\bin\Release\SRV.Utilidades.pdb
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\bin\Release\Newtonsoft.Json.dll
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\bin\Release\WinSCPnet.dll
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\bin\Release\Newtonsoft.Json.xml
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.csprojResolveAssemblyReference.cache
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.dll
+C:\Andrea\REPOSITORIO ALO\ALO_REST_FTP\ALO_FTP_REST_20200520_V2\SRV.RESTFul\SRV.Utilidades\obj\Release\SRV.Utilidades.pdb
