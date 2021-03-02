@@ -1,0 +1,133 @@
+﻿@using SRV.RESTFulAlo.Helpers; 
+@{
+    Layout = null;
+   
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RESTFul</title>
+
+
+    @Html.CSSLink("~/lib/bootstrap-3.3.7/css/bootstrap.min.css")
+    @Html.CSSLink("~/lib/font-awesome-4.7.0/css/font-awesome.min.css")
+    @Html.CSSLink("~/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css")
+    @Html.CSSLink("~/lib/Datatables/css/dataTables.bootstrap.css")
+    @Html.CSSLink("~/lib/bootstrap-select/css/bootstrap-select.css")
+    @Html.CSSLink("~/css/Home.css")
+
+
+    @Html.JSLink("~/lib/jquery-3.2.0/jquery-3.2.0.min.js")
+    @Html.JSLink("~/lib/bootstrap-3.3.7/js/bootstrap.min.js")
+    @Html.JSLink("~/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js")
+    @Html.JSLink("~/lib/Datatables/js/jquery.dataTables.min.js")
+    @Html.JSLink("~/lib/bootstrap-select/js/bootstrap-select.js")
+    @Html.JSLink("~/js/Progress.js")
+
+
+  <!-- =================================================================================================================== -->
+  <!-- HABILITAR MONITOR                                                                                                   -->
+  <!-- =================================================================================================================== -->
+      <script type="text/javascript">var rumMOKey = 'da8ba76240dd1a6eabb93d927bdf9fd5'; (function () { if (window.performance && window.performance.timing && window.performance.navigation) { var site24x7_rum_beacon = document.createElement('script'); site24x7_rum_beacon.async = true; site24x7_rum_beacon.setAttribute('src', '//static.site24x7rum.com/beacon/site24x7rum-min.js?appKey=' + rumMOKey); document.getElementsByTagName('head')[0].appendChild(site24x7_rum_beacon); } })(window) </script>
+
+
+  <!-- =================================================================================================================== -->
+  <!-- ESTILOS                                                                                                             -->
+  <!-- =================================================================================================================== -->
+    <style type="text/css">
+   
+   
+   
+    </style>
+  <!-- =================================================================================================================== -->
+  <!-- FIN ESTILOS                                                                                                         -->
+  <!-- =================================================================================================================== -->
+
+
+  <!-- =================================================================================================================== -->
+  <!-- SCRIPT                                                                                                              -->
+  <!-- =================================================================================================================== -->
+    <script type="text/javascript">
+
+
+        
+        function LIMPIAR_PROGRESS()
+        {
+
+            $("#DP_CONSULTA_100").children().removeClass("in");
+            $("#DP_CONSULTA_100").css("display", "none")
+
+
+        }
+
+
+
+
+
+
+
+    </script>
+  <!-- =================================================================================================================== -->
+  <!-- FIN SCRIPT                                                                                                          -->
+  <!-- =================================================================================================================== -->
+    @RenderSection("HeadContent", required: true)
+
+
+</head>
+<body>
+
+
+    <!-- ===========================================================================================================================-->
+    <!-- NAVEGADOR                                                                                                                  -->
+    <!-- ===========================================================================================================================-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href='#'>
+         
+              <img style="max-width:230px; margin-top: -7px; margin-left: 0px ; height : 60px" alt="Logo"
+             		src= '@Html.Href("~/images/LOGO.png")' >
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+ 
+            </ul>
+            <!-- ===================================================================================================================-->
+            <!-- ===================================================================================================================-->
+            <ul class="nav navbar-nav navbar-right">
+              
+               
+
+            </ul>
+            <!-- ===================================================================================================================-->
+            <!-- ===================================================================================================================-->
+        </div>
+      </div>
+    </nav>
+    <!-- ===========================================================================================================================-->
+    <!-- FIN NAVEGADOR                                                                                                              -->
+    <!-- ===========================================================================================================================-->
+
+
+    <!-- ===========================================================================================================================-->
+    <!-- CONTENEDOR                                                                                                                 -->
+    <!-- ===========================================================================================================================-->
+    <div class="container">
+         @RenderSection("MainContent", required: true)
+    </div>
+    <!-- ===========================================================================================================================-->
+    <!-- FIN CONTENEDOR                                                                                                             -->
+    <!-- ===========================================================================================================================-->
+
+</body>
+</html>
+
